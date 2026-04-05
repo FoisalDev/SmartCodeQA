@@ -75,8 +75,8 @@ export default function AboutPage() {
 						<div className="grid lg:grid-cols-2 gap-16 items-center">
 							<AnimatedSection>
 								<ImagePlaceholder
-									filename="2.jpeg"
-									alt="Our Mission"
+									filename="2"
+									alt="About SmartCodeQA"
 									aspectRatio="video"
 									className="shadow-2xl card-hover"
 								/>

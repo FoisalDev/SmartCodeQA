@@ -3,36 +3,89 @@
 import { motion } from 'framer-motion';
 import { AnimatedSection } from '@/components/ui/AnimatedSection';
 import { FuturisticBackground } from '@/components/backgrounds';
+import { Github, Code2, Smartphone, Shield, Brain, Blocks, Globe, Database, Cloud } from 'lucide-react';
 
-const clients = [
-	{ name: 'Client Logo', filename: '4.jpeg' },
-	{ name: 'Client Logo', filename: '5.jpeg' },
-	{ name: 'Client Logo', filename: '6.jpeg' },
-	{ name: 'Client Logo', filename: '7.jpeg' },
-	{ name: 'Client Logo', filename: '4.jpeg' },
-	{ name: 'Client Logo', filename: '5.jpeg' }
+function ReactIcon({ size, color }: { size: number; color: string }) {
+	return (
+		<svg width={size} height={size} viewBox="-11.5 -10.23174 23 20.46348" fill="none">
+			<circle cx="0" cy="0" r="2.05" fill={color} />
+			<g stroke={color} strokeWidth="1" fill="none">
+				<ellipse rx="11" ry="4.2" />
+				<ellipse rx="11" ry="4.2" transform="rotate(60)" />
+				<ellipse rx="11" ry="4.2" transform="rotate(120)" />
+			</g>
+		</svg>
+	);
+}
+
+const techStack = [
+	{ name: 'React', icon: 'react', color: '#61DAFB' },
+	{ name: 'Next.js', icon: 'nextjs', color: '#FFFFFF' },
+	{ name: 'Tailwind', icon: 'tailwind', color: '#06B6D4' },
+	{ name: 'GitHub', icon: 'github', color: '#FFFFFF' },
+	{ name: 'Node.js', icon: 'node', color: '#339933' },
+	{ name: 'Python', icon: 'python', color: '#3776AB' },
+	{ name: 'AWS', icon: 'aws', color: '#FF9900' },
+	{ name: 'Docker', icon: 'docker', color: '#2496ED' },
+	{ name: 'Blockchain', icon: 'blockchain', color: '#F7931A' },
+	{ name: 'AI/ML', icon: 'ai', color: '#8B5CF6' },
+	{ name: 'Mobile', icon: 'mobile', color: '#10B981' },
+	{ name: 'QA', icon: 'qa', color: '#3B82F6' }
 ];
 
-function ClientLogo({ filename, name }: { filename: string; name: string }) {
+function TechIcon({ icon, color, name }: { icon: string; color: string; name: string }) {
+	const getIcon = () => {
+		switch (icon) {
+			case 'react':
+				return <ReactIcon size={28} color={color} />;
+			case 'github':
+				return <Github size={28} color={color} />;
+			case 'blockchain':
+				return <Blocks size={28} color={color} />;
+			case 'ai':
+				return <Brain size={28} color={color} />;
+			case 'mobile':
+				return <Smartphone size={28} color={color} />;
+			case 'qa':
+				return <Shield size={28} color={color} />;
+			case 'nextjs':
+				return <span style={{ color, fontWeight: 800, fontSize: '14px' }}>N</span>;
+			case 'tailwind':
+				return <Cloud size={28} color={color} />;
+			case 'node':
+				return <Code2 size={28} color={color} />;
+			case 'python':
+				return <Database size={28} color={color} />;
+			case 'aws':
+				return <Cloud size={28} color={color} />;
+			case 'docker':
+				return <Globe size={28} color={color} />;
+			default:
+				return <Code2 size={28} color={color} />;
+		}
+	};
+
 	return (
 		<motion.div
-			className="flex-shrink-0 w-[200px] h-[80px] mx-4 cursor-hover group"
-			whileHover={{ scale: 1.08 }}
+			className="flex-shrink-0 w-[140px] h-[70px] mx-3 cursor-pointer group"
+			whileHover={{ scale: 1.1 }}
 			transition={{ duration: 0.3 }}
 		>
-			<div className="relative w-full h-full bg-background/80 border border-border rounded-2xl flex items-center justify-center overflow-hidden transition-all duration-300 group-hover:border-accent-blue/50 group-hover:shadow-glow">
-				<motion.div className="absolute inset-0 bg-gradient-to-br from-accent-blue/5 to-accent-cyan/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-				<div className="relative z-10 flex flex-col items-center gap-2">
+			<div className="relative w-full h-full bg-background/60 backdrop-blur-sm border border-border/50 rounded-xl flex items-center justify-center overflow-hidden transition-all duration-300 group-hover:border-accent-blue/40 group-hover:shadow-lg group-hover:shadow-accent-blue/10">
+				<motion.div
+					className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+					style={{ background: `linear-gradient(135deg, ${color}10, ${color}05)` }}
+				/>
+				<div className="relative z-10 flex flex-col items-center gap-1.5">
 					<motion.div
-						className="w-10 h-10 rounded-lg bg-gradient-to-br from-accent-blue/20 to-accent-cyan/20 flex items-center justify-center"
-						animate={{ rotate: [0, 5, -5, 0] }}
-						transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
+						className="w-8 h-8 flex items-center justify-center"
+						animate={{ y: [0, -2, 0] }}
+						transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut' }}
 					>
-						<div className="w-4 h-4 rounded bg-accent-blue/50" />
+						{getIcon()}
 					</motion.div>
-					<span className="text-xs text-text-muted font-mono">{filename}</span>
+					<span className="text-[10px] text-text-muted font-medium">{name}</span>
 				</div>
-				<motion.div className="absolute -bottom-4 -right-4 w-16 h-16 bg-accent-blue/10 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 			</div>
 		</motion.div>
 	);
@@ -45,9 +98,9 @@ export function TrustStrip() {
 
 			<div className="container-custom mb-12 relative z-20">
 				<AnimatedSection className="text-center">
-					<p className="text-text-muted text-sm uppercase tracking-widest mb-4">Trusted by</p>
+					<p className="text-text-muted text-sm uppercase tracking-widest mb-4">Powered by</p>
 					<h3 className="heading-md">
-						Innovative Companies <span className="text-gradient">Worldwide</span>
+						Modern Tech <span className="text-gradient">Stack</span>
 					</h3>
 				</AnimatedSection>
 			</div>
@@ -58,42 +111,42 @@ export function TrustStrip() {
 
 				<div className="flex items-center py-4">
 					<motion.div
-						className="flex items-center gap-4"
+						className="flex items-center gap-3"
 						animate={{
-							x: [0, -200 * clients.length]
+							x: [0, -140 * techStack.length]
 						}}
 						transition={{
 							x: {
 								repeat: Infinity,
 								repeatType: 'loop',
-								duration: 30,
+								duration: 40,
 								ease: 'linear'
 							}
 						}}
 					>
-						{[...clients, ...clients, ...clients, ...clients].map((client, index) => (
-							<ClientLogo key={`top-${index}`} filename={client.filename} name={client.name} />
+						{[...techStack, ...techStack, ...techStack, ...techStack].map((tech, index) => (
+							<TechIcon key={`top-${index}`} icon={tech.icon} color={tech.color} name={tech.name} />
 						))}
 					</motion.div>
 				</div>
 
 				<div className="flex items-center py-4 mt-4">
 					<motion.div
-						className="flex items-center gap-4"
+						className="flex items-center gap-3"
 						animate={{
-							x: [-200 * clients.length, 0]
+							x: [-140 * techStack.length, 0]
 						}}
 						transition={{
 							x: {
 								repeat: Infinity,
 								repeatType: 'loop',
-								duration: 35,
+								duration: 45,
 								ease: 'linear'
 							}
 						}}
 					>
-						{[...clients, ...clients, ...clients, ...clients].reverse().map((client, index) => (
-							<ClientLogo key={`bottom-${index}`} filename={client.filename} name={client.name} />
+						{[...techStack, ...techStack, ...techStack, ...techStack].reverse().map((tech, index) => (
+							<TechIcon key={`bottom-${index}`} icon={tech.icon} color={tech.color} name={tech.name} />
 						))}
 					</motion.div>
 				</div>

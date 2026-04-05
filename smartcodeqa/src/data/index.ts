@@ -13,7 +13,7 @@ export const services = [
 			'Performance Testing',
 			'Usability Testing'
 		],
-		image: '1.jpeg'
+		image: '3'
 	},
 	{
 		id: 'ai-apps',
@@ -29,7 +29,7 @@ export const services = [
 			'Integration APIs',
 			'Chatbot Development'
 		],
-		image: '2.jpeg'
+		image: '4'
 	},
 	{
 		id: 'mobile-development',
@@ -45,7 +45,7 @@ export const services = [
 			'Cross-Platform Apps',
 			'Mobile QA'
 		],
-		image: '3.jpeg'
+		image: '5'
 	},
 	{
 		id: 'web-development',
@@ -61,7 +61,7 @@ export const services = [
 			'Landing Pages',
 			'Progressive Web Apps'
 		],
-		image: '4.jpeg'
+		image: '6'
 	},
 	{
 		id: 'blockchain',
@@ -77,7 +77,7 @@ export const services = [
 			'Web3 Integration',
 			'Blockchain Security'
 		],
-		image: '5.jpeg'
+		image: '7'
 	},
 	{
 		id: 'desktop',
@@ -93,7 +93,7 @@ export const services = [
 			'Automation Tools',
 			'Reporting Systems'
 		],
-		image: '6.jpeg'
+		image: '8'
 	}
 ];
 
@@ -111,7 +111,7 @@ export const teamMembers = [
 			'Web & Mobile QA',
 			'Desktop App QA'
 		],
-		image: '8.jpeg',
+		image: '9',
 		email: 'moinul@smartcodeqa.com'
 	},
 	{
@@ -127,7 +127,7 @@ export const teamMembers = [
 			'CI/CD',
 			'API Development'
 		],
-		image: '9.jpeg',
+		image: '10',
 		email: 'delower@smartcodeqa.com'
 	},
 	{
@@ -142,7 +142,7 @@ export const teamMembers = [
 			'Communication',
 			'Process Optimization'
 		],
-		image: '10.jpeg',
+		image: '11',
 		email: 'selim@smartcodeqa.com'
 	},
 	{
@@ -158,7 +158,7 @@ export const teamMembers = [
 			'Cross-Browser Testing',
 			'Issue Reporting'
 		],
-		image: '11.jpeg',
+		image: '12',
 		email: 'musfika@smartcodeqa.com'
 	},
 	{
@@ -174,7 +174,7 @@ export const teamMembers = [
 			'Execution Validation',
 			'QA Workflows'
 		],
-		image: '12.jpeg',
+		image: '13',
 		email: 'foisal@smartcodeqa.com'
 	}
 ];
@@ -182,33 +182,33 @@ export const teamMembers = [
 export const projects = [
 	{
 		id: '1',
-		title: 'Mix of Manual and Automated Testing of Web Application + API',
+		title: 'Web Application + API Testing',
 		category: 'QA Testing / Automation / API',
 		timeline: 'Jul 1, 2025 – Mar 9, 2026',
 		summary:
 			'Comprehensive manual and automated testing across core web flows and API behavior to improve release quality and system reliability.',
 		tags: ['QA Testing', 'Automation', 'API'],
-		image: '7.jpeg'
+		image: '14'
 	},
 	{
 		id: '2',
-		title: 'Mobile App QA (iOS + Android) – 1-Week Launch Readiness Sweep',
+		title: 'Mobile App QA (iOS + Android)',
 		category: 'Mobile QA',
 		timeline: 'Aug 19, 2025 – Nov 21, 2025',
 		summary:
 			'Launch-focused cross-platform QA validation for mobile readiness, usability, and issue reporting.',
 		tags: ['Mobile QA', 'iOS', 'Android'],
-		image: '7.jpeg'
+		image: '15'
 	},
 	{
 		id: '3',
-		title: 'Voice AI Quality Assurance Tester Needed',
+		title: 'Voice AI Quality Assurance',
 		category: 'AI QA / Voice Testing',
 		timeline: 'Sep 8, 2025 – Sep 13, 2025',
 		summary:
 			'Quality validation for voice AI behavior, response handling, and user interaction quality.',
 		tags: ['AI QA', 'Voice Testing'],
-		image: '7.jpeg'
+		image: '16'
 	},
 	{
 		id: '4',
@@ -218,7 +218,7 @@ export const projects = [
 		summary:
 			'Automation-focused validation workflow designed to improve consistency and reduce repetitive manual effort.',
 		tags: ['Automation', 'Testing'],
-		image: '7.jpeg'
+		image: '17'
 	},
 	{
 		id: '5',
@@ -227,47 +227,47 @@ export const projects = [
 		timeline: 'Jul 23, 2025 – Jul 28, 2025',
 		summary: 'Focused QA execution with structured bug discovery, reporting, and validation.',
 		tags: ['QA', 'Testing'],
-		image: '7.jpeg'
+		image: '18'
 	},
 	{
 		id: '6',
-		title: 'Mobile Apps and Administration Maintenance',
+		title: 'Mobile Apps Maintenance',
 		category: 'Maintenance / Mobile Support',
 		timeline: 'Aug 25, 2024 – Dec 28, 2024',
 		summary:
 			'Ongoing maintenance and administration support for mobile product reliability and continuity.',
 		tags: ['Maintenance', 'Mobile'],
-		image: '7.jpeg'
+		image: '19'
 	},
 	{
 		id: '7',
-		title: 'Looking for Q&A Expert to Test Our Mobile App and Provide Report',
+		title: 'Mobile App Testing & Report',
 		category: 'Mobile App Testing',
 		timeline: 'Aug 20, 2024 – Oct 16, 2024',
 		summary:
 			'End-to-end mobile app testing with detailed issue reporting and user-flow validation.',
 		tags: ['Mobile Testing', 'QA'],
-		image: '7.jpeg'
+		image: '20'
 	},
 	{
 		id: '8',
-		title: 'Walmart Product Feedback',
+		title: 'Product Feedback & Review',
 		category: 'Product Research / QA Support',
 		timeline: 'Aug 23, 2024 – Sep 27, 2024',
 		summary:
 			'Structured feedback and product review support focused on usability and practical observations.',
 		tags: ['Product Research', 'QA Support'],
-		image: '7.jpeg'
+		image: '21'
 	},
 	{
 		id: '9',
-		title: 'Android App Testing on Different Smartphones',
+		title: 'Android Device Compatibility Testing',
 		category: 'Device Compatibility Testing',
 		timeline: 'Jul 15, 2024',
 		summary:
 			'Multi-device Android validation to identify environment-specific issues and compatibility risks.',
 		tags: ['Android', 'Compatibility Testing'],
-		image: '7.jpeg'
+		image: '22'
 	}
 ];
 

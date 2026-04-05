@@ -31,27 +31,37 @@ export function ImagePlaceholder({
 	const [showFallback, setShowFallback] = useState(false);
 
 	useEffect(() => {
+		let cancelled = false;
+
 		if (filename.includes('.')) {
 			setResolvedSrc(`/images/${filename}`);
 			return;
 		}
 
-		let found = false;
-		for (const ext of extensions) {
-			const img = document.createElement('img');
-			img.onload = () => {
-				if (!found) {
-					found = true;
-					setResolvedSrc(`/images/${filename}${ext}`);
+		const tryExtensions = async () => {
+			for (const ext of extensions) {
+				if (cancelled) return;
+				const src = `/images/${filename}${ext}?v=${Date.now()}`;
+				try {
+					const response = await fetch(src, { method: 'HEAD' });
+					if (response.ok && !cancelled) {
+						setResolvedSrc(`/images/${filename}${ext}`);
+						return;
+					}
+				} catch {
+					continue;
 				}
-			};
-			img.onerror = () => {
-				if (!found && ext === extensions[extensions.length - 1]) {
-					setShowFallback(true);
-				}
-			};
-			img.src = `/images/${filename}${ext}`;
-		}
+			}
+			if (!cancelled) {
+				setShowFallback(true);
+			}
+		};
+
+		tryExtensions();
+
+		return () => {
+			cancelled = true;
+		};
 	}, [filename]);
 
 	if (showFallback || !resolvedSrc) {
