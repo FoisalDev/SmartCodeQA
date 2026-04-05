@@ -49,6 +49,14 @@ export const metadata: Metadata = {
 			'max-snippet': -1
 		}
 	},
+	icons: {
+		icon: [
+			{ url: '/images/fav.svg', type: 'image/svg+xml' },
+			{ url: '/images/fav.ico' }
+		],
+		apple: '/images/fav.svg',
+		shortcut: '/images/fav.svg'
+	},
 	openGraph: {
 		type: 'website',
 		locale: 'en_US',

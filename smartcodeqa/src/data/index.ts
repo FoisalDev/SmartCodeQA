@@ -100,7 +100,7 @@ export const services = [
 export const teamMembers = [
 	{
 		id: 'moinul',
-		name: 'Moinul',
+		name: 'Moinul Hossain',
 		role: 'CEO, SmartCodeQA',
 		bio: 'Leads agency vision, client delivery direction, and quality strategy. Expert QA Engineer with a focus on Manual & Automation Testing.',
 		expertise: [
@@ -116,7 +116,7 @@ export const teamMembers = [
 	},
 	{
 		id: 'delower',
-		name: 'Delower',
+		name: 'Delower Hossain',
 		role: 'Business Manager / Full-Stack & Automation Support',
 		bio: 'Supports business operations and technical execution across automation and development initiatives.',
 		expertise: [
@@ -132,7 +132,7 @@ export const teamMembers = [
 	},
 	{
 		id: 'selim',
-		name: 'Selim',
+		name: 'Selim B.',
 		role: 'Business Manager',
 		bio: 'Supports business coordination, delivery continuity, and client communication workflows.',
 		expertise: [
@@ -147,7 +147,7 @@ export const teamMembers = [
 	},
 	{
 		id: 'musfika',
-		name: 'Musfika M.',
+		name: 'Musfika Meem',
 		role: 'QA Specialist',
 		bio: 'Manual testing specialist with strong experience in web, mobile, UI/UX review, and detailed issue reporting.',
 		expertise: [
