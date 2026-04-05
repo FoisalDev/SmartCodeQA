@@ -2,7 +2,6 @@
 
 import { cn } from '@/lib/utils';
 import { motion } from 'framer-motion';
-import Image from 'next/image';
 import { useState, useEffect } from 'react';
 
 interface ImagePlaceholderProps {
@@ -31,25 +30,30 @@ export function ImagePlaceholder({
 	const [showFallback, setShowFallback] = useState(false);
 
 	useEffect(() => {
-		let cancelled = false;
-
 		if (filename.includes('.')) {
 			setResolvedSrc(`/images/${filename}`);
 			return;
 		}
 
-		const tryExtensions = async () => {
+		let cancelled = false;
+
+		const checkImage = (src: string): Promise<boolean> => {
+			return new Promise((resolve) => {
+				const img = new Image();
+				img.onload = () => resolve(true);
+				img.onerror = () => resolve(false);
+				img.src = src;
+			});
+		};
+
+		const findImage = async () => {
 			for (const ext of extensions) {
 				if (cancelled) return;
-				const src = `/images/${filename}${ext}?v=${Date.now()}`;
-				try {
-					const response = await fetch(src, { method: 'HEAD' });
-					if (response.ok && !cancelled) {
-						setResolvedSrc(`/images/${filename}${ext}`);
-						return;
-					}
-				} catch {
-					continue;
+				const src = `/images/${filename}${ext}`;
+				const exists = await checkImage(src);
+				if (exists && !cancelled) {
+					setResolvedSrc(src);
+					return;
 				}
 			}
 			if (!cancelled) {
@@ -57,7 +61,7 @@ export function ImagePlaceholder({
 			}
 		};
 
-		tryExtensions();
+		findImage();
 
 		return () => {
 			cancelled = true;
@@ -96,11 +100,10 @@ export function ImagePlaceholder({
 				className
 			)}
 		>
-			<Image
+			<img
 				src={resolvedSrc}
 				alt={alt}
-				fill
-				className="object-cover"
+				className="w-full h-full object-cover"
 			/>
 		</motion.div>
 	);

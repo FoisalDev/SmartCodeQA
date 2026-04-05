@@ -8,6 +8,7 @@ import { AnimatedSection, StaggerContainer, StaggerItem } from '@/components/ui/
 import { SectionLabel } from '@/components/ui/SectionLabel';
 import { FuturisticBackground } from '@/components/backgrounds';
 import { Logo } from '@/components/ui/Logo';
+import { ImagePlaceholder } from '@/components/ui/ImagePlaceholder';
 
 const iconMap: Record<string, React.ElementType> = {
 	Shield,
@@ -72,10 +73,16 @@ export function ServicesGrid() {
 							<StaggerItem key={service.id}>
 								<Link href={`/services#${service.id}`}>
 									<motion.div
-										className="card card-hover card-glow h-full group cursor-hover"
+										className="card card-hover card-glow h-full group cursor-hover overflow-hidden"
 										whileHover={{ y: -12 }}
 										transition={{ duration: 0.4, ease: [0.25, 0.46, 0.45, 0.94] }}
 									>
+										<ImagePlaceholder
+											filename={service.image}
+											alt={service.title}
+											aspectRatio="video"
+											className="mb-4 -mx-6 -mt-6 rounded-none"
+										/>
 										<div className="relative z-10">
 											<motion.div
 												className="w-16 h-16 rounded-2xl bg-gradient-to-br from-accent-blue/20 to-accent-cyan/20 flex items-center justify-center mb-6 transition-all duration-300 group-hover:shadow-lg group-hover:shadow-accent-blue/20"

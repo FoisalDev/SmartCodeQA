@@ -71,7 +71,7 @@ export default function ProjectsPage() {
 							))}
 						</AnimatedSection>
 
-						<StaggerContainer className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+						<StaggerContainer key={activeCategory} className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
 							{filteredProjects.map((project) => (
 								<StaggerItem key={project.id}>
 									<motion.div whileHover={{ y: -8 }} className="card card-hover h-full">

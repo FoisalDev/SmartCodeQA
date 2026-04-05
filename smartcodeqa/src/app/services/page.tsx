@@ -10,6 +10,7 @@ import { SectionLabel } from '@/components/ui/SectionLabel';
 import { ServicesBackground } from '@/components/backgrounds';
 import { services } from '@/data';
 import { Shield, Brain, Smartphone, Globe, Blocks, Monitor } from 'lucide-react';
+import { ImagePlaceholder } from '@/components/ui/ImagePlaceholder';
 
 export const metadata: Metadata = {
 	title: 'Services',
@@ -119,14 +120,14 @@ export default function ServicesPage() {
 													<ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
 												</Link>
 											</div>
-											<div className={isEven ? '' : 'lg:order-1'}>
-												<div className="aspect-video bg-surface border border-border rounded-2xl flex items-center justify-center">
-													<div className="text-center text-text-muted">
-														<Icon className="w-16 h-16 mx-auto mb-4 opacity-30" />
-														<span className="font-mono text-sm">{service.image}</span>
-													</div>
-												</div>
-											</div>
+										<div className={isEven ? '' : 'lg:order-1'}>
+											<ImagePlaceholder
+												filename={service.image}
+												alt={service.title}
+												aspectRatio="video"
+												className="shadow-2xl"
+											/>
+										</div>
 										</div>
 									</StaggerItem>
 								);

@@ -31,7 +31,8 @@ export function ContactSection() {
 		company: '',
 		service: '',
 		budget: '',
-		message: ''
+		message: '',
+		_honeypot: ''
 	});
 	const [isSubmitting, setIsSubmitting] = useState(false);
 	const [isSubmitted, setIsSubmitted] = useState(false);
@@ -192,6 +193,17 @@ export function ContactSection() {
 													))}
 												</select>
 											</div>
+										</div>
+
+										<div className="hidden">
+											<input
+												type="text"
+												name="_honeypot"
+												value={formState._honeypot}
+												onChange={handleChange}
+												tabIndex={-1}
+												autoComplete="off"
+											/>
 										</div>
 
 										<div>
