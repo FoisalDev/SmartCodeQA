@@ -8,29 +8,29 @@ import { ImagePlaceholder } from '@/components/ui/ImagePlaceholder';
 
 function RotatingLogo() {
 	return (
-		<div className="absolute -left-20 top-1/2 -translate-y-1/2 hidden lg:block">
-			<div className="relative w-40 h-40">
-				<div className="absolute inset-0 rounded-full border-2 border-accent-blue/30 animate-spin-slow" />
-				<div className="absolute inset-2 rounded-full border border-accent-cyan/20 animate-spin-reverse" />
+		<div className="absolute -left-16 top-1/2 -translate-y-1/2 hidden lg:block z-10">
+			<div className="relative w-44 h-44">
+				<div className="absolute inset-0 rounded-full border-[2px] border-accent-blue/50 animate-spin-slow" />
+				<div className="absolute inset-1 rounded-full border border-accent-cyan/40 animate-spin-reverse" />
+				<div className="absolute inset-3 rounded-full border border-accent-blue/30 animate-spin-slow" style={{ animationDuration: '18s' }} />
 				<div className="absolute inset-0 flex items-center justify-center">
-					<div className="w-16 h-16 rounded-full bg-gradient-to-br from-accent-blue to-accent-cyan flex items-center justify-center shadow-lg shadow-accent-blue/30">
-						<span className="text-white font-bold text-lg">SC</span>
+					<div className="w-10 h-10 rounded-full bg-gradient-to-br from-accent-blue to-accent-cyan flex items-center justify-center shadow-lg shadow-accent-blue/50">
+						<span className="text-white font-bold text-sm">SC</span>
 					</div>
 				</div>
-				<svg className="absolute inset-0 w-full h-full animate-spin-slow" viewBox="0 0 160 160">
+				<svg className="absolute inset-0 w-full h-full animate-spin-slow" viewBox="0 0 176 176">
 					<defs>
-						<path id="circlePath" d="M 80, 80 m -60, 0 a 60,60 0 1,1 120,0 a 60,60 0 1,1 -120,0" />
+						<path id="circlePath" d="M 88, 88 m -65, 0 a 65,65 0 1,1 130,0 a 65,65 0 1,1 -130,0" />
 					</defs>
-					<text
-						className="fill-accent-blue text-[10px] font-medium tracking-[0.3em] uppercase"
-						style={{ letterSpacing: '0.35em' }}
-					>
-						<textPath href="#circlePath">SMARTCODEQA • SMARTCOD EQA •&nbsp;</textPath>
+					<text fontSize="11" fontWeight="700" fill="#3b82f6" dominantBaseline="middle" textAnchor="middle" style={{ filter: 'drop-shadow(0 0 4px rgba(59, 130, 246, 1))' }}>
+						<textPath href="#circlePath" startOffset="0%">
+							✦SmartCodeQA✦•✦SmartCodeQA✦•✦SmartCodeQA✦•✦SmartCodeQA✦•✦SmartCodeQA✦•✦SmartCodeQA✦•✦SmartCodeQA✦•✦SmartCodeQA✦
+						</textPath>
 					</text>
 				</svg>
 				<div
 					className="absolute inset-0 rounded-full animate-pulse-glow"
-					style={{ boxShadow: '0 0 30px rgba(59, 130, 246, 0.3), 0 0 60px rgba(6, 182, 212, 0.2)' }}
+					style={{ boxShadow: '0 0 30px rgba(59, 130, 246, 0.5), 0 0 60px rgba(6, 182, 212, 0.3)' }}
 				/>
 			</div>
 		</div>

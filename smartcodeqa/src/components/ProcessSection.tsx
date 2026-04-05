@@ -5,10 +5,43 @@ import { processSteps } from '@/data';
 import { AnimatedSection, StaggerContainer, StaggerItem } from '@/components/ui/AnimatedSection';
 import { SectionLabel } from '@/components/ui/SectionLabel';
 
+function ProcessRotatingCircle({ className }: { className?: string }) {
+	return (
+		<div className={`absolute z-10 pointer-events-none hidden lg:block ${className}`}>
+			<div className="relative w-44 h-44">
+				<div className="absolute inset-0 rounded-full border-[2px] border-accent-blue/50 animate-spin-slow" />
+				<div className="absolute inset-1 rounded-full border border-accent-cyan/40 animate-spin-reverse" />
+				<div className="absolute inset-3 rounded-full border border-accent-blue/30 animate-spin-slow" style={{ animationDuration: '18s' }} />
+				<div className="absolute inset-0 flex items-center justify-center">
+					<div className="w-10 h-10 rounded-full bg-gradient-to-br from-accent-blue to-accent-cyan flex items-center justify-center shadow-lg shadow-accent-blue/50">
+						<span className="text-white font-bold text-sm">SC</span>
+					</div>
+				</div>
+				<svg className="absolute inset-0 w-full h-full animate-spin-slow" viewBox="0 0 176 176">
+					<defs>
+						<path id="processCirclePath" d="M 88, 88 m -65, 0 a 65,65 0 1,1 130,0 a 65,65 0 1,1 -130,0" />
+					</defs>
+					<text fontSize="11" fontWeight="700" fill="#3b82f6" dominantBaseline="middle" textAnchor="middle" style={{ filter: 'drop-shadow(0 0 4px rgba(59, 130, 246, 1))' }}>
+						<textPath href="#processCirclePath" startOffset="0%">
+							✦SmartCodeQA✦•✦SmartCodeQA✦•✦SmartCodeQA✦•✦SmartCodeQA✦•✦SmartCodeQA✦•✦SmartCodeQA✦•✦SmartCodeQA✦•✦SmartCodeQA✦
+						</textPath>
+					</text>
+				</svg>
+				<div
+					className="absolute inset-0 rounded-full animate-pulse-glow"
+					style={{ boxShadow: '0 0 30px rgba(59, 130, 246, 0.5), 0 0 60px rgba(6, 182, 212, 0.3)' }}
+				/>
+			</div>
+		</div>
+	);
+}
+
 export function ProcessSection() {
 	return (
-		<section className="section-padding bg-surface/50">
-			<div className="container-custom">
+		<section className="section-padding bg-surface/50 relative overflow-hidden">
+			<ProcessRotatingCircle className="-left-10 top-10" />
+			<ProcessRotatingCircle className="-right-10 bottom-10" />
+			<div className="container-custom relative z-10">
 				<AnimatedSection className="text-center mb-16">
 					<SectionLabel>Our Process</SectionLabel>
 					<h2 className="heading-lg mb-4">

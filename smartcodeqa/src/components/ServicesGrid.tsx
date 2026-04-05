@@ -17,10 +17,43 @@ const iconMap: Record<string, React.ElementType> = {
 	Monitor
 };
 
+function ServiceRotatingCircle({ className, delay = 0 }: { className?: string; delay?: number }) {
+	return (
+		<div className={`absolute z-10 pointer-events-none hidden lg:block ${className}`}>
+			<div className="relative w-44 h-44">
+				<div className="absolute inset-0 rounded-full border-[2px] border-accent-cyan/50 animate-spin-slow" />
+				<div className="absolute inset-1 rounded-full border border-accent-blue/40 animate-spin-reverse" />
+				<div className="absolute inset-3 rounded-full border border-accent-cyan/30 animate-spin-slow" style={{ animationDuration: '18s' }} />
+				<div className="absolute inset-0 flex items-center justify-center">
+					<div className="w-10 h-10 rounded-full bg-gradient-to-br from-accent-cyan to-accent-blue flex items-center justify-center shadow-lg shadow-accent-cyan/50">
+						<span className="text-white font-bold text-sm">SC</span>
+					</div>
+				</div>
+				<svg className="absolute inset-0 w-full h-full animate-spin-slow" viewBox="0 0 176 176">
+					<defs>
+						<path id="serviceCirclePath" d="M 88, 88 m -65, 0 a 65,65 0 1,1 130,0 a 65,65 0 1,1 -130,0" />
+					</defs>
+					<text fontSize="11" fontWeight="700" fill="#06b6d4" dominantBaseline="middle" textAnchor="middle" style={{ filter: 'drop-shadow(0 0 4px rgba(6, 182, 212, 1))' }}>
+						<textPath href="#serviceCirclePath" startOffset="0%">
+							✦SmartCodeQA✦•✦SmartCodeQA✦•✦SmartCodeQA✦•✦SmartCodeQA✦•✦SmartCodeQA✦•✦SmartCodeQA✦•✦SmartCodeQA✦•✦SmartCodeQA✦
+						</textPath>
+					</text>
+				</svg>
+				<div
+					className="absolute inset-0 rounded-full animate-pulse-glow"
+					style={{ boxShadow: '0 0 30px rgba(6, 182, 212, 0.5), 0 0 60px rgba(59, 130, 246, 0.3)' }}
+				/>
+			</div>
+		</div>
+	);
+}
+
 export function ServicesGrid() {
 	return (
 		<section className="section-padding bg-surface/50 relative overflow-hidden">
 			<FuturisticBackground />
+			<ServiceRotatingCircle className="-left-16 top-20" delay={0} />
+			<ServiceRotatingCircle className="-right-16 bottom-20" delay={2} />
 			<div className="container-custom relative z-10">
 				<AnimatedSection className="text-center mb-16">
 					<SectionLabel>Our Services</SectionLabel>
