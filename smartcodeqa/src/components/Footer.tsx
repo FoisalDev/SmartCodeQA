@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { Mail, MapPin, Phone, Linkedin, Twitter, Github } from 'lucide-react';
+import { Mail, MapPin, Phone, Facebook, Linkedin, Github } from 'lucide-react';
 
 const footerLinks = {
 	company: [
@@ -46,18 +46,22 @@ export function Footer() {
 						</p>
 						<div className="flex items-center gap-4">
 							<a
-								href="#"
+								href="https://www.facebook.com/profile.php?id=61586378348423"
+								target="_blank"
+								rel="noopener noreferrer"
+								className="w-10 h-10 rounded-lg bg-background border border-border flex items-center justify-center text-text-muted hover:text-accent-blue hover:border-accent-blue transition-all"
+								aria-label="Facebook"
+							>
+								<Facebook className="w-5 h-5" />
+							</a>
+							<a
+								href="https://www.linkedin.com/company/smartcodeqa/"
+								target="_blank"
+								rel="noopener noreferrer"
 								className="w-10 h-10 rounded-lg bg-background border border-border flex items-center justify-center text-text-muted hover:text-accent-blue hover:border-accent-blue transition-all"
 								aria-label="LinkedIn"
 							>
 								<Linkedin className="w-5 h-5" />
-							</a>
-							<a
-								href="#"
-								className="w-10 h-10 rounded-lg bg-background border border-border flex items-center justify-center text-text-muted hover:text-accent-blue hover:border-accent-blue transition-all"
-								aria-label="Twitter"
-							>
-								<Twitter className="w-5 h-5" />
 							</a>
 							<a
 								href="#"
@@ -105,7 +109,7 @@ export function Footer() {
 						<h4 className="font-heading font-semibold text-text-primary mb-4">Contact</h4>
 						<ul className="space-y-4">
 							<li className="flex items-start gap-3">
-								<Mail className="w-5 h-5 text-accent-blue mt-0.5" />
+								<Mail className="w-5 h-5 text-accent-blue mt-0.5 shrink-0" />
 								<a
 									href="mailto:info@smartcodeqa.com"
 									className="text-text-secondary hover:text-accent-blue transition-colors"
@@ -114,16 +118,16 @@ export function Footer() {
 								</a>
 							</li>
 							<li className="flex items-start gap-3">
-								<Phone className="w-5 h-5 text-accent-blue mt-0.5" />
+								<Phone className="w-5 h-5 text-accent-blue mt-0.5 shrink-0" />
 								<a
-									href="tel:+1234567890"
+									href="tel:+8801718192949"
 									className="text-text-secondary hover:text-accent-blue transition-colors"
 								>
-									+1 (234) 567-890
+									+880 1718-192949
 								</a>
 							</li>
 							<li className="flex items-start gap-3">
-								<MapPin className="w-5 h-5 text-accent-blue mt-0.5" />
+								<MapPin className="w-5 h-5 text-accent-blue mt-0.5 shrink-0" />
 								<span className="text-text-secondary">
 									Sherpur, Bogura
 									<br />

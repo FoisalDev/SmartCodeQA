@@ -57,9 +57,25 @@ export function ContactSection() {
 		setErrors({});
 		setIsSubmitting(true);
 
-		await new Promise((resolve) => setTimeout(resolve, 1500));
-		setIsSubmitting(false);
-		setIsSubmitted(true);
+		try {
+			const response = await fetch('/api/contact', {
+				method: 'POST',
+				headers: {
+					'Content-Type': 'application/json',
+				},
+				body: JSON.stringify(formState),
+			});
+
+			if (!response.ok) {
+				throw new Error('Failed to send message');
+			}
+
+			setIsSubmitted(true);
+		} catch (error) {
+			setErrors({ message: 'Failed to send message. Please try again.' });
+		} finally {
+			setIsSubmitting(false);
+		}
 	};
 
 	const handleChange = (
@@ -114,7 +130,7 @@ export function ContactSection() {
 										<div className="grid md:grid-cols-2 gap-6">
 											<div>
 												<label className="block text-sm font-medium text-text-primary mb-2">
-													Full Name *
+													Full Name
 												</label>
 												<input
 													type="text"
@@ -122,13 +138,13 @@ export function ContactSection() {
 													value={formState.name}
 													onChange={handleChange}
 													className={`input-field ${errors.name ? 'border-red-500' : ''}`}
-													placeholder="John Doe"
+													placeholder="Your name"
 												/>
 												{errors.name && <p className="text-red-500 text-sm mt-1">{errors.name}</p>}
 											</div>
 											<div>
 												<label className="block text-sm font-medium text-text-primary mb-2">
-													Email Address *
+													Email Address
 												</label>
 												<input
 													type="email"
@@ -136,7 +152,7 @@ export function ContactSection() {
 													value={formState.email}
 													onChange={handleChange}
 													className={`input-field ${errors.email ? 'border-red-500' : ''}`}
-													placeholder="john@company.com"
+													placeholder="Your email"
 												/>
 												{errors.email && (
 													<p className="text-red-500 text-sm mt-1">{errors.email}</p>
@@ -180,26 +196,7 @@ export function ContactSection() {
 
 										<div>
 											<label className="block text-sm font-medium text-text-primary mb-2">
-												Project Budget Range
-											</label>
-											<select
-												name="budget"
-												value={formState.budget}
-												onChange={handleChange}
-												className="input-field"
-											>
-												<option value="">Select budget range</option>
-												{budgets.map((budget) => (
-													<option key={budget} value={budget}>
-														{budget}
-													</option>
-												))}
-											</select>
-										</div>
-
-										<div>
-											<label className="block text-sm font-medium text-text-primary mb-2">
-												Message *
+												Message
 											</label>
 											<textarea
 												name="message"
@@ -250,7 +247,7 @@ export function ContactSection() {
 									</div>
 								</a>
 								<a
-									href="tel:+1234567890"
+									href="tel:+8801718192949"
 									className="flex items-start gap-4 text-text-secondary hover:text-accent-blue transition-colors"
 								>
 									<div className="w-10 h-10 rounded-lg bg-accent-blue/10 flex items-center justify-center flex-shrink-0">
@@ -258,7 +255,7 @@ export function ContactSection() {
 									</div>
 									<div>
 										<div className="text-sm text-text-muted">Phone</div>
-										<div>+1 (234) 567-890</div>
+										<div>+880 1718-192949</div>
 									</div>
 								</a>
 								<div className="flex items-start gap-4 text-text-secondary">
