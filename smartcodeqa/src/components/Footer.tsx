@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { Mail, MapPin, Phone, Facebook, Linkedin, Github } from 'lucide-react';
+import { Logo } from '@/components/ui/Logo';
 
 const footerLinks = {
 	company: [
@@ -33,9 +34,7 @@ export function Footer() {
 				<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12">
 					<div className="lg:col-span-2">
 						<Link href="/" className="flex items-center gap-2 mb-6">
-							<div className="w-10 h-10 rounded-xl bg-gradient-to-br from-accent-blue to-accent-cyan flex items-center justify-center">
-								<span className="text-white font-bold text-lg">SC</span>
-							</div>
+							<Logo size="xl" />
 							<span className="font-heading font-bold text-xl text-text-primary">
 								SmartCode<span className="text-accent-blue">QA</span>
 							</span>

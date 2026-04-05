@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { ArrowRight, Play, ChevronDown } from 'lucide-react';
 import { ImagePlaceholder } from '@/components/ui/ImagePlaceholder';
+import { Logo } from '@/components/ui/Logo';
 
 function RotatingLogo() {
 	return (
@@ -14,8 +15,8 @@ function RotatingLogo() {
 				<div className="absolute inset-1 rounded-full border border-accent-cyan/40 animate-spin-reverse" />
 				<div className="absolute inset-3 rounded-full border border-accent-blue/30 animate-spin-slow" style={{ animationDuration: '18s' }} />
 				<div className="absolute inset-0 flex items-center justify-center">
-					<div className="w-10 h-10 rounded-full bg-gradient-to-br from-accent-blue to-accent-cyan flex items-center justify-center shadow-lg shadow-accent-blue/50">
-						<span className="text-white font-bold text-sm">SC</span>
+					<div className="w-16 h-16 rounded-full overflow-hidden shadow-lg shadow-accent-blue/50 flex items-center justify-center">
+						<Logo size="lg" breathing />
 					</div>
 				</div>
 				<svg className="absolute inset-0 w-full h-full animate-spin-slow" viewBox="0 0 176 176">

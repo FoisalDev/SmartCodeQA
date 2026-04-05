@@ -7,6 +7,7 @@ import { services } from '@/data';
 import { AnimatedSection, StaggerContainer, StaggerItem } from '@/components/ui/AnimatedSection';
 import { SectionLabel } from '@/components/ui/SectionLabel';
 import { FuturisticBackground } from '@/components/backgrounds';
+import { Logo } from '@/components/ui/Logo';
 
 const iconMap: Record<string, React.ElementType> = {
 	Shield,
@@ -25,8 +26,8 @@ function ServiceRotatingCircle({ className, delay = 0 }: { className?: string; d
 				<div className="absolute inset-1 rounded-full border border-accent-blue/40 animate-spin-reverse" />
 				<div className="absolute inset-3 rounded-full border border-accent-cyan/30 animate-spin-slow" style={{ animationDuration: '18s' }} />
 				<div className="absolute inset-0 flex items-center justify-center">
-					<div className="w-10 h-10 rounded-full bg-gradient-to-br from-accent-cyan to-accent-blue flex items-center justify-center shadow-lg shadow-accent-cyan/50">
-						<span className="text-white font-bold text-sm">SC</span>
+					<div className="w-14 h-14 rounded-full overflow-hidden shadow-lg shadow-accent-cyan/50 flex items-center justify-center">
+						<Logo size="md" breathing />
 					</div>
 				</div>
 				<svg className="absolute inset-0 w-full h-full animate-spin-slow" viewBox="0 0 176 176">

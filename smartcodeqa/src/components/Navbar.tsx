@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { motion, AnimatePresence, useMotionValue } from 'framer-motion';
 import { cn } from '@/lib/utils';
 import { Menu, X, ChevronDown, Phone } from 'lucide-react';
+import { Logo } from '@/components/ui/Logo';
 
 const navLinks = [
 	{ href: '/', label: 'Home' },
@@ -43,35 +44,8 @@ export function Navbar() {
 		>
 			<nav className="container-custom">
 				<div className="flex items-center justify-between">
-					<Link href="/" className="flex items-center gap-2 group cursor-hover">
-						<div className="relative w-10 h-10">
-							<motion.div
-								className="absolute inset-0 rounded-xl bg-gradient-to-br from-accent-blue to-accent-cyan flex items-center justify-center"
-								animate={{
-									opacity: [1, 0.3, 1],
-									scale: [1, 0.95, 1]
-								}}
-								transition={{
-									duration: 3,
-									repeat: Infinity,
-									ease: 'easeInOut'
-								}}
-								whileHover={{ scale: 1.1, rotate: 5 }}
-							>
-								<span className="text-white font-bold text-lg">SC</span>
-							</motion.div>
-							<motion.div
-								className="absolute inset-0 rounded-xl bg-gradient-to-br from-accent-blue to-accent-cyan flex items-center justify-center blur-md"
-								animate={{
-									opacity: [0.5, 0, 0.5]
-								}}
-								transition={{
-									duration: 3,
-									repeat: Infinity,
-									ease: 'easeInOut'
-								}}
-							/>
-						</div>
+					<Link href="/" className="flex items-center gap-2 group cursor-pointer">
+						<Logo size="lg" animated />
 						<motion.span
 							className="font-heading font-bold text-xl text-text-primary"
 							animate={{ opacity: [1, 0.7, 1] }}
