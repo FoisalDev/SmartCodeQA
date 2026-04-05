@@ -14,9 +14,7 @@ function RotatingCircle({ className }: { className?: string }) {
 				<div className="absolute inset-1 rounded-full border border-accent-cyan/40 animate-spin-reverse" />
 				<div className="absolute inset-3 rounded-full border border-accent-blue/30 animate-spin-slow" style={{ animationDuration: '18s' }} />
 				<div className="absolute inset-0 flex items-center justify-center">
-					<div className="w-14 h-14 rounded-full overflow-hidden shadow-lg shadow-accent-blue/50 flex items-center justify-center">
-						<Logo size="md" breathing />
-					</div>
+					<Logo size="md" breathing />
 				</div>
 				<svg className="absolute inset-0 w-full h-full animate-spin-slow" viewBox="0 0 176 176">
 					<defs>
