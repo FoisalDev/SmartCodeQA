@@ -221,7 +221,7 @@ export function HeroSection() {
 								transition={{ duration: 6, repeat: Infinity, ease: 'easeInOut' }}
 							>
 								<ImagePlaceholder
-									filename="1.jpeg"
+									filename="1.png"
 									alt="Dashboard Preview"
 									aspectRatio="video"
 									className="shadow-2xl ring-2 ring-accent-blue/30 card-hover"

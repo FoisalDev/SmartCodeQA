@@ -35,10 +35,10 @@ export function AboutPreview() {
 				<div className="grid lg:grid-cols-2 gap-16 items-center">
 					<AnimatedSection>
 						<ImagePlaceholder
-							filename="2.jpeg"
+							filename="2"
 							alt="About SmartCodeQA"
 							aspectRatio="video"
-							className="shadow-2xl card-hover"
+							className="shadow-2xl"
 						/>
 					</AnimatedSection>
 
