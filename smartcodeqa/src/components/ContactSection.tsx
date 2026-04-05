@@ -100,9 +100,9 @@ export function ContactSection() {
 					</p>
 				</AnimatedSection>
 
-				<div className="grid lg:grid-cols-5 gap-12">
-					<AnimatedSection className="lg:col-span-3">
-						<div className="card">
+				<div className="grid lg:grid-cols-2 gap-12">
+					<AnimatedSection className="lg:col-span-1">
+						<div className="card h-full">
 							<AnimatePresence mode="wait">
 								{isSubmitted ? (
 									<motion.div
@@ -230,7 +230,7 @@ export function ContactSection() {
 						</div>
 					</AnimatedSection>
 
-					<AnimatedSection delay={0.2} className="lg:col-span-2 space-y-6">
+					<AnimatedSection delay={0.2} className="lg:col-span-1 space-y-6">
 						<div className="card">
 							<h3 className="heading-sm mb-6">Contact Information</h3>
 							<div className="space-y-4">

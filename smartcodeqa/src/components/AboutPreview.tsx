@@ -29,15 +29,16 @@ const features = [
 export function AboutPreview() {
 	return (
 		<section className="section-padding relative overflow-hidden">
+			<div className="absolute inset-0 bg-background z-0" />
 			<FuturisticBackground />
-			<div className="container-custom relative z-10">
+			<div className="container-custom relative z-20">
 				<div className="grid lg:grid-cols-2 gap-16 items-center">
 					<AnimatedSection>
 						<ImagePlaceholder
 							filename="2.jpeg"
 							alt="About SmartCodeQA"
 							aspectRatio="video"
-							className="shadow-2xl"
+							className="shadow-2xl card-hover"
 						/>
 					</AnimatedSection>
 
@@ -57,11 +58,11 @@ export function AboutPreview() {
 						<StaggerContainer className="grid sm:grid-cols-2 gap-4 mb-8">
 							{features.map((feature, index) => (
 								<StaggerItem key={index}>
-									<div className="card card-hover h-full">
-										<h3 className="font-heading font-semibold text-text-primary mb-2">
+									<div className="card card-hover h-full group">
+										<h3 className="font-heading font-semibold text-text-primary mb-2 group-hover:text-accent-blue transition-colors duration-300">
 											{feature.title}
 										</h3>
-										<p className="text-sm text-text-secondary">{feature.description}</p>
+										<p className="text-sm text-text-secondary group-hover:text-text-primary transition-colors duration-300">{feature.description}</p>
 									</div>
 								</StaggerItem>
 							))}

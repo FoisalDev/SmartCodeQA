@@ -224,7 +224,7 @@ export function HeroSection() {
 									filename="1.jpeg"
 									alt="Dashboard Preview"
 									aspectRatio="video"
-									className="shadow-2xl ring-2 ring-accent-blue/30"
+									className="shadow-2xl ring-2 ring-accent-blue/30 card-hover"
 								/>
 							</motion.div>
 

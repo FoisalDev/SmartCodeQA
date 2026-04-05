@@ -37,7 +37,7 @@ export function TeamPreview() {
 											filename={member.image}
 											alt={member.name}
 											aspectRatio="square"
-											className="mb-4"
+											className="mb-4 card-hover"
 										/>
 									</motion.div>
 

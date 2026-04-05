@@ -43,7 +43,7 @@ export default function TeamPage() {
 											filename={member.image}
 											alt={member.name}
 											aspectRatio="video"
-											className="mb-6"
+											className="mb-6 card-hover"
 										/>
 										<h3 className="heading-sm mb-1">{member.name}</h3>
 										<p className="text-accent-blue mb-4">{member.role}</p>

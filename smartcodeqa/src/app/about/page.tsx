@@ -78,7 +78,7 @@ export default function AboutPage() {
 									filename="2.jpeg"
 									alt="Our Mission"
 									aspectRatio="video"
-									className="shadow-2xl"
+									className="shadow-2xl card-hover"
 								/>
 							</AnimatedSection>
 							<AnimatedSection delay={0.2}>
@@ -211,7 +211,7 @@ export default function AboutPage() {
 											filename={member.image}
 											alt={member.name}
 											aspectRatio="square"
-											className="mb-4 mx-auto max-w-[180px]"
+											className="mb-4 mx-auto max-w-[180px] card-hover"
 										/>
 										<h3 className="font-heading font-semibold text-text-primary">{member.name}</h3>
 										<p className="text-sm text-accent-blue">{member.role}</p>

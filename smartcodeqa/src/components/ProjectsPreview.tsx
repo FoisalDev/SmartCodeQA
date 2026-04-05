@@ -35,7 +35,7 @@ export function ProjectsPreview() {
 									filename={project.image}
 									alt={project.title}
 									aspectRatio="video"
-									className="mb-6"
+									className="mb-6 card-hover"
 								/>
 								<div className="flex items-center gap-4 mb-3">
 									<span className="flex items-center gap-1 text-xs text-accent-blue">
