@@ -5,6 +5,7 @@ import { ArrowRight } from 'lucide-react';
 import { AnimatedSection, StaggerContainer, StaggerItem } from '@/components/ui/AnimatedSection';
 import { SectionLabel } from '@/components/ui/SectionLabel';
 import { ImagePlaceholder } from '@/components/ui/ImagePlaceholder';
+import { FuturisticBackground } from '@/components/backgrounds';
 
 const features = [
 	{
@@ -27,8 +28,9 @@ const features = [
 
 export function AboutPreview() {
 	return (
-		<section className="section-padding">
-			<div className="container-custom">
+		<section className="section-padding relative overflow-hidden">
+			<FuturisticBackground />
+			<div className="container-custom relative z-10">
 				<div className="grid lg:grid-cols-2 gap-16 items-center">
 					<AnimatedSection>
 						<ImagePlaceholder

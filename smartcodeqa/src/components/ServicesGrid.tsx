@@ -6,6 +6,7 @@ import { ArrowRight, Shield, Brain, Smartphone, Globe, Blocks, Monitor } from 'l
 import { services } from '@/data';
 import { AnimatedSection, StaggerContainer, StaggerItem } from '@/components/ui/AnimatedSection';
 import { SectionLabel } from '@/components/ui/SectionLabel';
+import { FuturisticBackground } from '@/components/backgrounds';
 
 const iconMap: Record<string, React.ElementType> = {
 	Shield,
@@ -18,8 +19,9 @@ const iconMap: Record<string, React.ElementType> = {
 
 export function ServicesGrid() {
 	return (
-		<section className="section-padding bg-surface/50">
-			<div className="container-custom">
+		<section className="section-padding bg-surface/50 relative overflow-hidden">
+			<FuturisticBackground />
+			<div className="container-custom relative z-10">
 				<AnimatedSection className="text-center mb-16">
 					<SectionLabel>Our Services</SectionLabel>
 					<h2 className="heading-lg mb-4">

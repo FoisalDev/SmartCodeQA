@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { AnimatedSection } from '@/components/ui/AnimatedSection';
+import { FuturisticBackground } from '@/components/backgrounds';
 
 const clients = [
 	{ name: 'Client Logo', filename: '4.jpeg' },
@@ -39,35 +40,10 @@ function ClientLogo({ filename, name }: { filename: string; name: string }) {
 
 export function TrustStrip() {
 	return (
-		<section className="py-20 border-y border-border bg-surface/30 relative overflow-hidden">
-			<div className="absolute inset-0">
-				<motion.div
-					className="absolute top-1/4 left-1/4 w-64 h-64 bg-accent-blue/5 rounded-full blur-[100px]"
-					animate={{
-						x: [0, 50, 0],
-						y: [0, 30, 0]
-					}}
-					transition={{
-						duration: 15,
-						repeat: Infinity,
-						ease: 'easeInOut'
-					}}
-				/>
-				<motion.div
-					className="absolute bottom-1/4 right-1/4 w-64 h-64 bg-accent-cyan/5 rounded-full blur-[100px]"
-					animate={{
-						x: [0, -50, 0],
-						y: [0, -30, 0]
-					}}
-					transition={{
-						duration: 18,
-						repeat: Infinity,
-						ease: 'easeInOut'
-					}}
-				/>
-			</div>
+		<section className="py-20 border-y border-border relative overflow-hidden bg-surface/30">
+			<FuturisticBackground />
 
-			<div className="container-custom mb-12 relative z-10">
+			<div className="container-custom mb-12 relative z-20">
 				<AnimatedSection className="text-center">
 					<p className="text-text-muted text-sm uppercase tracking-widest mb-4">Trusted by</p>
 					<h3 className="heading-md">
@@ -76,7 +52,7 @@ export function TrustStrip() {
 				</AnimatedSection>
 			</div>
 
-			<div className="relative z-10">
+			<div className="relative z-20">
 				<div className="absolute left-0 top-0 bottom-0 w-40 bg-gradient-to-r from-surface/80 to-transparent z-20 pointer-events-none" />
 				<div className="absolute right-0 top-0 bottom-0 w-40 bg-gradient-to-l from-surface/80 to-transparent z-20 pointer-events-none" />
 
@@ -123,7 +99,7 @@ export function TrustStrip() {
 				</div>
 			</div>
 
-			<div className="container-custom mt-16 relative z-10">
+			<div className="container-custom mt-16 relative z-20">
 				<div className="flex flex-wrap justify-center gap-8 md:gap-16">
 					{[
 						{ value: '80+', label: 'Companies Trust Us' },

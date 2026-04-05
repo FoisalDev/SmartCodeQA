@@ -58,12 +58,22 @@ function FloatingStatusCard({
 	subtitle: string;
 	icon: 'check' | 'shield';
 }) {
-	return (
+		return (
 		<motion.div
 			className={`absolute ${position} glass rounded-2xl p-5 shadow-2xl cursor-pointer group`}
 			initial={{ opacity: 0, scale: 0.8 }}
-			animate={{ opacity: 1, scale: 1 }}
-			transition={{ delay, duration: 0.5 }}
+			animate={{
+				opacity: 1,
+				scale: 1,
+				y: [0, -12, 0],
+				rotate: [0, 1, 0]
+			}}
+			transition={{
+				delay,
+				duration: 0.5,
+				y: { duration: 4 + delay, repeat: Infinity, ease: 'easeInOut', delay: delay * 0.5 },
+				rotate: { duration: 5 + delay, repeat: Infinity, ease: 'easeInOut', delay: delay * 0.3 }
+			}}
 			style={{
 				background: `linear-gradient(135deg, ${bgColor} 0%, rgba(10, 15, 28, 0.9) 100%)`,
 				border: `1px solid ${borderColor}`,
@@ -73,14 +83,6 @@ function FloatingStatusCard({
 				scale: 1.08,
 				y: -8,
 				boxShadow: `0 30px 60px -15px rgba(0, 0, 0, 0.6), 0 0 50px ${borderColor}40`
-			}}
-			animate={{
-				y: [0, -12, 0],
-				rotate: [0, 1, 0]
-			}}
-			transition={{
-				y: { duration: 4 + delay, repeat: Infinity, ease: 'easeInOut', delay: delay * 0.5 },
-				rotate: { duration: 5 + delay, repeat: Infinity, ease: 'easeInOut', delay: delay * 0.3 }
 			}}
 		>
 			<div className="flex items-center gap-4 relative z-10">
@@ -149,20 +151,6 @@ export function HeroSection() {
 
 	return (
 		<section ref={ref} className="relative min-h-screen flex items-center pt-20 overflow-hidden">
-			<div className="absolute inset-0 z-0">
-				<video
-					autoPlay
-					loop
-					muted
-					playsInline
-					preload="auto"
-					className="absolute inset-0 w-full h-full object-cover opacity-60"
-				>
-					<source src="https://assets.mixkit.co/videos/99786/99786-720.mp4" type="video/mp4" />
-				</video>
-			</div>
-
-			<div className="absolute inset-0 z-10 bg-gradient-to-br from-background/70 via-background/50 to-background/70" />
 
 			<RotatingLogo />
 

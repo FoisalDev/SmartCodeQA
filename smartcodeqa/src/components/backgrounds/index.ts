@@ -1,4 +1,4 @@
-export { HomeBackground } from './HomeBackground';
+export { HomeBackground, FuturisticBackground } from './HomeBackground';
 export { AboutBackground } from './AboutBackground';
 export { ServicesBackground } from './ServicesBackground';
 export { ProjectsBackground } from './ProjectsBackground';
