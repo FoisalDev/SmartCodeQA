@@ -13,9 +13,12 @@ import { Shield, Brain, Smartphone, Globe, Blocks, Monitor } from 'lucide-react'
 import { ImagePlaceholder } from '@/components/ui/ImagePlaceholder';
 
 export const metadata: Metadata = {
-	title: 'Services',
+	title: 'Our Services - QA Testing, AI Integration, Web & Mobile Development',
 	description:
-		'Explore SmartCodeQA comprehensive services including QA Testing, AI Apps & Integrations, Mobile Development, Web Development, Blockchain solutions, and Desktop Applications.'
+		'Explore SmartCodeQA comprehensive services including QA Testing, AI Apps & Integrations, Mobile Development, Web Development, Blockchain solutions, and Desktop Applications. End-to-end solutions tailored to your business.',
+	alternates: {
+		canonical: 'https://smartcodeqa.com/services'
+	}
 };
 
 const iconMap: Record<string, React.ElementType> = {

@@ -12,9 +12,12 @@ import { AboutBackground } from '@/components/backgrounds';
 import { whyChooseUs, processSteps, teamMembers } from '@/data';
 
 export const metadata: Metadata = {
-	title: 'About Us',
+	title: 'About SmartCodeQA - QA Testing & Software Development Agency',
 	description:
-		'Learn about SmartCodeQA - a technical agency built to help businesses ship with confidence through QA engineering, automation, AI integration, and emerging technology solutions.'
+		'Learn about SmartCodeQA - a technical agency built to help businesses ship with confidence through QA engineering, test automation, AI integration, and emerging technology solutions. Our expert team delivers quality across web, mobile, SaaS, and blockchain.',
+	alternates: {
+		canonical: 'https://smartcodeqa.com/about'
+	}
 };
 
 const values = [

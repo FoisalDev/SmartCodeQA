@@ -15,9 +15,12 @@ import { ContactSection } from '@/components/ContactSection';
 import { HomeBackground } from '@/components/backgrounds';
 
 export const metadata: Metadata = {
-	title: 'SmartCodeQA - Your Partner in Quality Assurance & Emerging Technologies',
+	title: 'SmartCodeQA - QA Testing, AI Integration & Software Development',
 	description:
-		'SmartCodeQA helps startups and growing businesses deliver reliable digital products through QA engineering, automation, AI integrations, mobile development, web development, and emerging technology solutions.'
+		'SmartCodeQA helps startups and growing businesses deliver reliable digital products through QA engineering, test automation, AI integrations, mobile development, web development, and emerging technology solutions. 80+ clients trust us worldwide.',
+	alternates: {
+		canonical: 'https://smartcodeqa.com'
+	}
 };
 
 export default function HomePage() {
