@@ -49,73 +49,73 @@ function ServiceRotatingCircle({ className, delay = 0 }: { className?: string; d
 }
 
 export function ServicesGrid() {
-	return (
-		<section className="section-padding bg-surface/50 relative overflow-hidden">
-			<FuturisticBackground />
-			<ServiceRotatingCircle className="-left-16 top-20" delay={0} />
-			<ServiceRotatingCircle className="-right-16 bottom-20" delay={2} />
-			<div className="container-custom relative z-10">
-				<AnimatedSection className="text-center mb-16">
-					<SectionLabel>Our Services</SectionLabel>
-					<h2 className="heading-lg mb-4">
-						Comprehensive solutions for <span className="text-gradient">every tech need</span>
-					</h2>
-					<p className="text-text-secondary max-w-2xl mx-auto">
-						From quality assurance to cutting-edge AI integration, we deliver end-to-end solutions
-						tailored to your business requirements.
-					</p>
-				</AnimatedSection>
+  return (
+    <section className="section-padding bg-surface/50 relative overflow-hidden">
+      <FuturisticBackground />
+      <ServiceRotatingCircle className="-left-16 top-20" delay={0} />
+      <ServiceRotatingCircle className="-right-16 bottom-20" delay={2} />
+      <div className="container-custom relative z-10">
+        <AnimatedSection className="text-center mb-12 sm:mb-16">
+          <SectionLabel>Our Services</SectionLabel>
+          <h2 className="heading-lg mb-3 sm:mb-4">
+            Comprehensive solutions for <span className="text-gradient">every tech need</span>
+          </h2>
+          <p className="text-text-secondary max-w-xl mx-auto">
+            From quality assurance to cutting-edge AI integration, we deliver end-to-end solutions
+            tailored to your business requirements.
+          </p>
+        </AnimatedSection>
 
-				<StaggerContainer className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-					{services.map((service) => {
-						const Icon = iconMap[service.icon] || Shield;
-						return (
-							<StaggerItem key={service.id}>
-								<Link href={`/services#${service.id}`}>
-									<motion.div
-										className="card card-hover card-glow h-full group cursor-hover overflow-hidden"
-										whileHover={{ y: -12 }}
-										transition={{ duration: 0.4, ease: [0.25, 0.46, 0.45, 0.94] }}
-									>
-										<ImagePlaceholder
-											filename={service.image}
-											alt={service.title}
-											aspectRatio="video"
-											className="mb-4 -mx-6 -mt-6 rounded-none"
-										/>
-										<div className="relative z-10">
-											<motion.div
-												className="w-16 h-16 rounded-2xl bg-gradient-to-br from-accent-blue/20 to-accent-cyan/20 flex items-center justify-center mb-6 transition-all duration-300 group-hover:shadow-lg group-hover:shadow-accent-blue/20"
-												whileHover={{ scale: 1.1, rotate: 5 }}
-											>
-												<Icon className="w-8 h-8 text-accent-blue" />
-											</motion.div>
+        <StaggerContainer className="grid gap-5 sm:gap-6">
+          {services.map((service) => {
+            const Icon = iconMap[service.icon] || Shield;
+            return (
+              <StaggerItem key={service.id}>
+                <Link href={`/services#${service.id}`}>
+                  <motion.div
+                    className="card card-hover card-glow group cursor-hover"
+                    whileHover={{ y: -2 }}
+                    transition={{ duration: 0.3, ease: [0.25, 0.46, 0.45, 0.94] }}
+                  >
+                    <ImagePlaceholder
+                      filename={service.image}
+                      alt={service.title}
+                      aspectRatio="video"
+                      className="mb-3 -mx-1.5 -mt-1.5 rounded-none"
+                    />
+                    <div className="relative z-10 space-y-2">
+                      <motion.div
+                        className="w-10 h-10 rounded-2xl bg-gradient-to-br from-accent-blue/20 to-accent-cyan/20 flex items-center justify-center transition-all duration-300 group-hover:shadow-lg group-hover:shadow-accent-blue/20"
+                        whileHover={{ scale: 1.02, rotate: 1 }}
+                      >
+                        <Icon className="w-5 h-5 text-accent-blue" />
+                      </motion.div>
 
-											<h3 className="heading-sm mb-3 group-hover:text-accent-blue transition-colors duration-300">
-												{service.title}
-											</h3>
-											<p className="text-text-secondary mb-6 leading-relaxed">
-												{service.description}
-											</p>
+                      <h3 className="heading-sm mb-1 group-hover:text-accent-blue transition-colors duration-300">
+                        {service.title}
+                      </h3>
+                      <p className="text-text-secondary text-sm leading-relaxed line-clamp-3 mb-3">
+                        {service.description}
+                      </p>
 
-											<motion.div
-												className="flex items-center text-accent-blue font-medium text-sm"
-												whileHover={{ x: 8 }}
-												transition={{ duration: 0.2 }}
-											>
-												<span className="mr-2">Learn More</span>
-												<ArrowRight className="w-4 h-4" />
-											</motion.div>
-										</div>
+                      <motion.div
+                        className="flex items-center text-accent-blue font-medium text-xs"
+                        whileHover={{ x: 2 }}
+                        transition={{ duration: 0.2 }}
+                      >
+                        <span className="mr-0.5">Learn More</span>
+                        <ArrowRight className="w-2 h-2" />
+                      </motion.div>
+                    </div>
 
-										<div className="absolute -bottom-4 -right-4 w-32 h-32 bg-gradient-to-br from-accent-blue/10 to-accent-cyan/5 rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-									</motion.div>
-								</Link>
-							</StaggerItem>
-						);
-					})}
-				</StaggerContainer>
-			</div>
-		</section>
-	);
+                    <div className="absolute -bottom-1.5 -right-1.5 w-16 h-16 bg-gradient-to-br from-accent-blue/10 to-accent-cyan/5 rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  </motion.div>
+                </Link>
+              </StaggerItem>
+            );
+          })}
+        </StaggerContainer>
+      </div>
+    </section>
+  );
 }

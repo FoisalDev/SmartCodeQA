@@ -18,87 +18,88 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-	metadataBase: new URL('https://smartcodeqa.com'),
-	title: {
-		default: 'SmartCodeQA - QA Testing, AI Integration & Software Development Agency',
-		template: '%s | SmartCodeQA'
-	},
-	description:
-		'SmartCodeQA helps startups and growing businesses deliver reliable digital products through QA engineering, test automation, AI integrations, mobile development, web development, and emerging technology solutions. 80+ clients trust us worldwide.',
-	keywords: [
-		'QA testing agency',
-		'software testing services',
-		'automation testing',
-		'mobile app testing company',
-		'web QA services',
-		'AI integration agency',
-		'web development agency',
-		'blockchain QA',
-		'quality assurance',
-		'test automation',
-		'SmartCodeQA',
-		'software development agency',
-		'mobile app development',
-		'AI integration services'
-	],
-	authors: [{ name: 'SmartCodeQA', url: 'https://smartcodeqa.com' }],
-	creator: 'SmartCodeQA',
-	publisher: 'SmartCodeQA',
-	formatDetection: {
-		email: false,
-		address: false,
-		telephone: false
-	},
-	robots: {
-		index: true,
-		follow: true,
-		googleBot: {
-			index: true,
-			follow: true,
-			'max-video-preview': -1,
-			'max-image-preview': 'large',
-			'max-snippet': -1
-		}
-	},
-	icons: {
-		icon: [
-			{ url: '/images/fav.svg', type: 'image/svg+xml' },
-			{ url: '/images/fav.ico' }
-		],
-		apple: '/images/fav.svg',
-		shortcut: '/images/fav.svg'
-	},
-	openGraph: {
-		type: 'website',
-		locale: 'en_US',
-		url: 'https://smartcodeqa.com',
-		siteName: 'SmartCodeQA',
-		title: 'SmartCodeQA - QA Testing, AI Integration & Software Development Agency',
-		description:
-			'SmartCodeQA helps startups and growing businesses deliver reliable digital products through QA engineering, test automation, AI integrations, mobile development, web development, and emerging technology solutions.',
-		images: [
-			{
-				url: '/og-image.png',
-				width: 1200,
-				height: 630,
-				alt: 'SmartCodeQA - Your Partner in Quality Assurance & Emerging Technologies'
-			}
-		]
-	},
-	twitter: {
-		card: 'summary_large_image',
-		title: 'SmartCodeQA - QA Testing, AI Integration & Software Development Agency',
-		description:
-			'SmartCodeQA helps startups and growing businesses deliver reliable digital products through QA engineering, test automation, AI integrations, mobile development, web development, and emerging technology solutions.',
-		images: ['/og-image.png'],
-		creator: '@smartcodeqa'
-	},
-	alternates: {
-		canonical: 'https://smartcodeqa.com'
-	},
-	verification: {
-		google: 'your-google-verification-code'
-	}
+  metadataBase: new URL('https://www.smartcodeqa.com'),
+  title: {
+    default: 'SmartCodeQA - Premier QA Testing & Software Development Agency',
+    template: '%s | SmartCodeQA'
+  },
+  description:
+    'SmartCodeQA is a leading QA testing and software development agency specializing in quality assurance, test automation, AI integration, mobile and web development. We help startups and growing businesses deliver reliable digital products with 80+ satisfied clients worldwide.',
+  keywords: [
+    'QA testing agency',
+    'software testing services',
+    'test automation company',
+    'mobile app testing',
+    'web development agency',
+    'AI integration services',
+    'quality assurance company',
+    'software development agency',
+    'mobile app development',
+    'blockchain testing',
+    'SmartCodeQA',
+    'QA engineers',
+    'test automation engineers',
+    'software QA',
+    'quality testing services'
+  ],
+  authors: [{ name: 'SmartCodeQA', url: 'https://www.smartcodeqa.com' }],
+  creator: 'SmartCodeQA',
+  publisher: 'SmartCodeQA',
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1
+    }
+  },
+  icons: {
+    icon: [
+      { url: '/images/fav.svg', type: 'image/svg+xml' },
+      { url: '/images/fav.ico' }
+    ],
+    apple: '/images/fav.svg',
+    shortcut: '/images/fav.svg'
+  },
+  openGraph: {
+    type: 'website',
+    locale: 'en_US',
+    url: 'https://www.smartcodeqa.com',
+    siteName: 'SmartCodeQA',
+    title: 'SmartCodeQA - Premier QA Testing & Software Development Agency',
+    description:
+      'SmartCodeQA is a leading QA testing and software development agency specializing in quality assurance, test automation, AI integration, mobile and web development. We help startups and growing businesses deliver reliable digital products with 80+ satisfied clients worldwide.',
+    images: [
+      {
+        url: '/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'SmartCodeQA - Your Partner in Quality Assurance & Emerging Technologies'
+      }
+    ]
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'SmartCodeQA - Premier QA Testing & Software Development Agency',
+    description:
+      'SmartCodeQA is a leading QA testing and software development agency specializing in quality assurance, test automation, AI integration, mobile and web development. We help startups and growing businesses deliver reliable digital products with 80+ satisfied clients worldwide.',
+    images: ['/og-image.png'],
+    creator: '@smartcodeqa'
+  },
+  alternates: {
+    canonical: 'https://www.smartcodeqa.com'
+  },
+  verification: {
+    google: 'your-google-verification-code-here'
+  }
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -145,18 +146,19 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 		}
 	};
 
-	return (
-		<html lang="en" className={`${spaceGrotesk.variable} ${inter.variable}`}>
-			<head>
-				<script
-					type="application/ld+json"
-					dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
-				/>
-				<script
-					type="application/ld+json"
-					dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
-				/>
-			</head>
+  return (
+    <html lang="en" className={`${spaceGrotesk.variable} ${inter.variable}`}>
+      <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
+        />
+      </head>
 			<body className="min-h-screen bg-background overflow-x-hidden antialiased">
 				<CursorProvider />
 				{children}

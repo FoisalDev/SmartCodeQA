@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Mail } from 'lucide-react';
+import { Mail, Linkedin } from 'lucide-react';
 import { teamMembers } from '@/data';
 import { Navbar } from '@/components/Navbar';
 import { Footer } from '@/components/Footer';
@@ -51,28 +51,36 @@ export default function TeamPage() {
 										<div className="mb-4">
 											<h4 className="text-sm font-medium text-text-primary mb-3">Expertise</h4>
 											<div className="flex flex-wrap gap-2">
-												{member.expertise.slice(0, 4).map((skill, index) => (
+												{member.expertise.slice(0, 4).map((skill) => (
 													<span
-														key={index}
+														key={skill}
 														className="px-2 py-1 text-xs bg-accent-blue/10 text-accent-blue border border-accent-blue/20 rounded"
 													>
 														{skill}
 													</span>
 												))}
-												{member.expertise.length > 4 && (
-													<span className="px-2 py-1 text-xs bg-surface border border-border text-text-muted rounded">
-														+{member.expertise.length - 4} more
-													</span>
-												)}
 											</div>
 										</div>
-										<a
-											href={`mailto:${member.email}`}
-											className="inline-flex items-center text-accent-blue text-sm font-medium hover:underline"
-										>
-											<Mail className="w-4 h-4 mr-2" />
-											{member.email}
-										</a>
+										<div className="flex flex-col space-y-2">
+											<a
+												href={`mailto:${member.email}`}
+												className="inline-flex items-center text-accent-blue text-sm font-medium hover:underline"
+											>
+												<Mail className="w-4 h-4 mr-2" />
+												{member.email}
+											</a>
+											{member.linkedin && (
+												<a
+													href={`https://${member.linkedin}`}
+													target="_blank"
+													rel="noopener noreferrer"
+													className="inline-flex items-center text-accent-blue text-sm font-medium hover:underline"
+												>
+													<Linkedin className="w-4 h-4 mr-2" />
+													LinkedIn
+												</a>
+											)}
+										</div>
 									</motion.div>
 								</StaggerItem>
 							))}

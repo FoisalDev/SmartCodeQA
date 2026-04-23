@@ -13,7 +13,7 @@ export const services = [
 			'Performance Testing',
 			'Usability Testing'
 		],
-		image: '3'
+		image: '3',
 	},
 	{
 		id: 'ai-apps',
@@ -29,7 +29,7 @@ export const services = [
 			'Integration APIs',
 			'Chatbot Development'
 		],
-		image: '4'
+		image: '4',
 	},
 	{
 		id: 'mobile-development',
@@ -45,7 +45,7 @@ export const services = [
 			'Cross-Platform Apps',
 			'Mobile QA'
 		],
-		image: '5'
+		image: '5',
 	},
 	{
 		id: 'web-development',
@@ -61,7 +61,7 @@ export const services = [
 			'Landing Pages',
 			'Progressive Web Apps'
 		],
-		image: '6'
+		image: '6',
 	},
 	{
 		id: 'blockchain',
@@ -77,7 +77,7 @@ export const services = [
 			'Web3 Integration',
 			'Blockchain Security'
 		],
-		image: '7'
+		image: '7',
 	},
 	{
 		id: 'desktop',
@@ -93,7 +93,7 @@ export const services = [
 			'Automation Tools',
 			'Reporting Systems'
 		],
-		image: '8'
+		image: '8',
 	}
 ];
 
@@ -111,8 +111,9 @@ export const teamMembers = [
 			'Web & Mobile QA',
 			'Desktop App QA'
 		],
-		image: '9',
-		email: 'moinul@smartcodeqa.com'
+		image: '9.png',
+		email: 'moinul@smartcodeqa.com',
+		linkedin: 'linkedin.com/in/moinul-hasan-sadik-manual-qa'
 	},
 	{
 		id: 'delower',
@@ -127,7 +128,7 @@ export const teamMembers = [
 			'CI/CD',
 			'API Development'
 		],
-		image: '10',
+		image: '10.jpeg',
 		email: 'delower@smartcodeqa.com'
 	},
 	{
@@ -142,7 +143,7 @@ export const teamMembers = [
 			'Communication',
 			'Process Optimization'
 		],
-		image: '11',
+		image: '11.jpeg',
 		email: 'selim@smartcodeqa.com'
 	},
 	{
@@ -158,25 +159,29 @@ export const teamMembers = [
 			'Cross-Browser Testing',
 			'Issue Reporting'
 		],
-		image: '12',
+		image: '12.png',
 		email: 'musfika@smartcodeqa.com'
 	},
-	{
-		id: 'foisal',
-		name: 'Foisal Arefin',
-		role: 'Software QA Engineer',
-		bio: 'Contributes to QA execution with a focus on software testing, quality analysis, and practical delivery support.',
-		expertise: [
-			'Software Testing',
-			'Quality Analysis',
-			'Usability Testing',
-			'Test Planning',
-			'Execution Validation',
-			'QA Workflows'
-		],
-		image: '13',
-		email: 'foisal@smartcodeqa.com'
-	}
+    {
+        id: 'foisal',
+        name: 'Foisal Arefin',
+        role: 'Software Engineer & QA Specialist',
+        bio: 'Dedicated software engineer specializing in full-stack development and quality assurance. Passionate about building reliable applications and ensuring high-quality deliverables through comprehensive testing practices.',
+        expertise: [
+            'Software Engineering',
+            'Quality Assurance',
+            'Full-Stack Development',
+            'Web Development',
+            'Backend Development',
+            'UI/UX Design',
+            'API Development',
+            'Testing & Automation',
+            'Code Review'
+        ],
+        image: '13.jpeg',
+        email: 'foisal@smartcodeqa.com',
+        linkedin: 'www.linkedin.com/in/foisal-arefin'
+    }
 ];
 
 export const projects = [
@@ -188,7 +193,7 @@ export const projects = [
 		summary:
 			'Comprehensive manual and automated testing across core web flows and API behavior to improve release quality and system reliability.',
 		tags: ['QA Testing', 'Automation', 'API'],
-		image: '14'
+		image: '14.png',
 	},
 	{
 		id: '2',
@@ -198,7 +203,7 @@ export const projects = [
 		summary:
 			'Launch-focused cross-platform QA validation for mobile readiness, usability, and issue reporting.',
 		tags: ['Mobile QA', 'iOS', 'Android'],
-		image: '15'
+		image: '15.jpg',
 	},
 	{
 		id: '3',
@@ -208,7 +213,7 @@ export const projects = [
 		summary:
 			'Quality validation for voice AI behavior, response handling, and user interaction quality.',
 		tags: ['AI QA', 'Voice Testing'],
-		image: '16'
+		image: '16.png',
 	},
 	{
 		id: '4',
@@ -218,7 +223,7 @@ export const projects = [
 		summary:
 			'Automation-focused validation workflow designed to improve consistency and reduce repetitive manual effort.',
 		tags: ['Automation', 'Testing'],
-		image: '17'
+		image: '17.png',
 	},
 	{
 		id: '5',
@@ -227,7 +232,7 @@ export const projects = [
 		timeline: 'Jul 23, 2025 – Jul 28, 2025',
 		summary: 'Focused QA execution with structured bug discovery, reporting, and validation.',
 		tags: ['QA', 'Testing'],
-		image: '18'
+		image: '18.png',
 	},
 	{
 		id: '6',
@@ -237,7 +242,7 @@ export const projects = [
 		summary:
 			'Ongoing maintenance and administration support for mobile product reliability and continuity.',
 		tags: ['Maintenance', 'Mobile'],
-		image: '19'
+		image: '19.jpg',
 	},
 	{
 		id: '7',
@@ -247,7 +252,7 @@ export const projects = [
 		summary:
 			'End-to-end mobile app testing with detailed issue reporting and user-flow validation.',
 		tags: ['Mobile Testing', 'QA'],
-		image: '20'
+		image: '20.png',
 	},
 	{
 		id: '8',
@@ -257,7 +262,7 @@ export const projects = [
 		summary:
 			'Structured feedback and product review support focused on usability and practical observations.',
 		tags: ['Product Research', 'QA Support'],
-		image: '21'
+		image: '21.png',
 	},
 	{
 		id: '9',
@@ -267,7 +272,7 @@ export const projects = [
 		summary:
 			'Multi-device Android validation to identify environment-specific issues and compatibility risks.',
 		tags: ['Android', 'Compatibility Testing'],
-		image: '22'
+		image: '22.png',
 	}
 ];
 

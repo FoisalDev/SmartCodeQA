@@ -19,6 +19,7 @@ export function AnimatedSection({ children, className, delay = 0, id }: Animated
 			transition={{ duration: 0.7, delay, ease: [0.25, 0.46, 0.45, 0.94] }}
 			className={cn('', className)}
 			id={id}
+			suppressHydrationWarning
 		>
 			{children}
 		</motion.div>
@@ -87,6 +88,7 @@ export function StaggerItem({
 			transition={{ duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
 			className={cn('', className)}
 			id={id}
+			suppressHydrationWarning
 		>
 			{children}
 		</motion.div>

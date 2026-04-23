@@ -1,0 +1,22 @@
+# SmartCodeQA Robots.txt
+# https://www.smartcodeqa.com/robots.txt
+
+User-agent: *
+Allow: /
+
+# Sitemap locations
+Sitemap: https://www.smartcodeqa.com/sitemap.xml
+Sitemap: https://www.smartcodeqa.com/sitemap-pages.xml
+Sitemap: https://www.smartcodeqa.com/sitemap-blogs.xml
+
+# Crawl-delay for better server performance
+# Crawl-delay: 1
+
+# Disallow admin and private areas
+Disallow: /admin/
+Disallow: /private/
+Disallow: /tmp/
+Disallow: /logs/
+
+# Allow important assets
+Allow: /wp-admin/admin-ajax.php

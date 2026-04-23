@@ -72,7 +72,13 @@ export function CustomCursor() {
 		handleMouseEnter
 	]);
 
-	if (!isMounted) return null;
+	if (!isMounted) {
+		return (
+			<div suppressHydrationWarning>
+				<div className="fixed top-0 left-0 pointer-events-none z-[9999]" />
+			</div>
+		);
+	}
 
 	const dotSize = isClicking ? 8 : isHovering ? 10 : 12;
 	const ringSize = isClicking ? 50 : isHovering ? 70 : 60;
