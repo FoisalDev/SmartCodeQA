@@ -84,7 +84,7 @@ export function HeroSection() {
   const ref = useRef<HTMLDivElement>(null);
 
   return (
-    <section ref={ref} className="relative min-h-screen flex items-center pt-16 sm:pt-20 overflow-hidden">
+    <section ref={ref} className="relative min-h-screen flex items-center pt-32 md:pt-48 overflow-hidden">
       <RotatingLogo />
 
       <div className="container-custom relative z-20">

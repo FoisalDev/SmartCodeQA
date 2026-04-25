@@ -29,7 +29,9 @@ export default function HomePage() {
 			<HomeBackground />
 			<Navbar />
 			<main className="relative z-10">
-				<HeroSection />
+				<div className="relative pt-[120px] md:pt-[160px] pb-20 overflow-x-hidden">
+					<HeroSection />
+				</div>
 				<TrustStrip />
 				<AboutPreview />
 				<ServicesGrid />
