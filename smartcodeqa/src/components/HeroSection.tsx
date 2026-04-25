@@ -9,7 +9,7 @@ import { Logo } from '@/components/ui/Logo';
 
 function RotatingLogo() {
   return (
-    <div className="absolute -left-16 top-1/2 -translate-y-1/2 hidden lg:block z-10">
+    <div className="absolute left-0 top-1/2 -translate-y-1/2 hidden lg:block z-10 overflow-hidden">
       <div className="relative w-44 h-44">
         <div className="absolute inset-0 rounded-full border-[2px] border-accent-blue/50 animate-spin-slow" />
         <div className="absolute inset-1 rounded-full border border-accent-cyan/40 animate-spin-reverse" />
@@ -84,7 +84,7 @@ export function HeroSection() {
   const ref = useRef<HTMLDivElement>(null);
 
   return (
-    <section ref={ref} className="relative min-h-screen flex items-center pt-32 md:pt-48 overflow-hidden">
+    <section ref={ref} className="relative flex items-center pt-16 md:pt-20 overflow-hidden">
       <RotatingLogo />
 
       <div className="container-custom relative z-20">

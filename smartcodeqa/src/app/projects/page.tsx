@@ -37,7 +37,7 @@ export default function ProjectsPage() {
 			<ProjectsBackground />
 			<Navbar />
 			<main className="relative z-10">
-				<section className="pt-32 pb-20">
+				<section className="pt-20 md:pt-24 pb-20">
 					<div className="container-custom">
 						<AnimatedSection className="text-center max-w-3xl mx-auto">
 							<SectionLabel>Our Work</SectionLabel>

@@ -159,7 +159,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
         />
       </head>
-			<body className="min-h-screen bg-background overflow-x-hidden antialiased">
+			<body className="min-h-screen bg-background antialiased">
 				<CursorProvider />
 				{children}
 			</body>

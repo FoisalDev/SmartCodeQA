@@ -11,7 +11,7 @@ export default function PrivacyPage() {
 	return (
 		<>
 			<Navbar />
-			<main className="pt-32 pb-20">
+			<main className="pt-20 md:pt-24 pb-20">
 				<div className="container-custom max-w-3xl">
 					<h1 className="heading-xl mb-8">Privacy Policy</h1>
 					<div className="prose prose-invert max-w-none">

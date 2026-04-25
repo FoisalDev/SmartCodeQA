@@ -28,8 +28,8 @@ export default function HomePage() {
 		<>
 			<HomeBackground />
 			<Navbar />
-			<main className="relative z-10">
-				<div className="relative pt-[120px] md:pt-[160px] pb-20 overflow-x-hidden">
+			<main className="relative z-10 overflow-hidden">
+				<div className="pt-20 md:pt-24">
 					<HeroSection />
 				</div>
 				<TrustStrip />

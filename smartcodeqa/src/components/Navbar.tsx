@@ -1,8 +1,7 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, ChevronDown, Phone } from 'lucide-react';
 import { Logo } from '@/components/ui/Logo';
 
@@ -26,9 +25,8 @@ export function Navbar() {
 	const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
 
 	return (
-		<header className="fixed top-0 left-0 w-full z-[100] bg-background/80 backdrop-blur-md border-b border-white/10">
-			<div className="flex items-center justify-between py-4 px-4 md:px-6 lg:px-8">
-				<div className="max-w-7xl mx-auto flex items-center justify-between w-full">
+		<header className="fixed top-0 left-0 right-0 z-[100] h-20 flex items-center bg-background/90 backdrop-blur-md border-b border-white/10">
+			<div className="flex items-center justify-between px-6 w-full max-w-7xl mx-auto">
 				<Link href="/" className="flex items-center gap-2">
 					<Logo size="md" className="w-10 h-10 md:w-12 md:h-12" />
 					<span className="font-heading font-bold text-xl md:text-2xl text-text-primary">
@@ -57,7 +55,7 @@ export function Navbar() {
 													href={item.href}
 													className="flex px-4 py-3 text-text-secondary hover:text-text-primary hover:bg-surface-elevated first:rounded-t-xl last:rounded-b-xl"
 												>
-												{item.label}
+													{item.label}
 												</Link>
 											))}
 										</div>
@@ -79,7 +77,7 @@ export function Navbar() {
 					</Link>
 				</div>
 
-				<div className="lg:hidden flex items-center mr-4">
+				<div className="lg:hidden flex items-center pr-4">
 					<button
 						className="p-2 text-text-primary"
 						onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -87,7 +85,6 @@ export function Navbar() {
 					>
 						{isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
 					</button>
-				</div>
 				</div>
 			</div>
 

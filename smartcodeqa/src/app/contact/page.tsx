@@ -16,7 +16,7 @@ export default function ContactPage() {
 			<ContactBackground />
 			<Navbar />
 			<main className="relative z-10">
-				<section className="pt-32 pb-20">
+				<section className="pt-20 md:pt-24 pb-20">
 					<div className="container-custom">
 						<div className="text-center max-w-3xl mx-auto">
 							<span className="inline-block text-sm font-medium uppercase tracking-wider text-accent-blue mb-4">
