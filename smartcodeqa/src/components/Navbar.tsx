@@ -48,7 +48,7 @@ export function Navbar() {
 										<ChevronDown className="w-4 h-4" />
 									</button>
 									{activeDropdown === link.label && (
-										<div className="absolute top-full left-0 mt-2 w-56 bg-surface border border-border rounded-xl shadow-xl">
+										<div className="absolute top-full left-0 pt-2 w-56 bg-surface border border-border rounded-xl shadow-xl z-[101]">
 											{link.items?.map((item, i) => (
 												<Link
 													key={i}

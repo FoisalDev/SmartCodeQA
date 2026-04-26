@@ -98,7 +98,7 @@ export const metadata: Metadata = {
     canonical: 'https://www.smartcodeqa.com'
   },
   verification: {
-    google: 'your-google-verification-code-here'
+    google: '4l1jytuBeKUs3XnG2Uoo0uGUOU_0n5dihx-xqewupJs'
   }
 };
 
