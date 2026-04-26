@@ -28,7 +28,7 @@ export function Navbar() {
 		<header className="fixed top-0 left-0 right-0 z-[100] h-20 flex items-center bg-background/90 backdrop-blur-md border-b border-white/10">
 			<div className="flex items-center justify-between px-6 w-full max-w-7xl mx-auto">
 				<Link href="/" className="flex items-center gap-2">
-					<Logo size="md" className="w-10 h-10 md:w-12 md:h-12" />
+					<Logo size="md" className="w-10 h-10 md:w-12 md:h-12 animate-soft-pulse" />
 					<span className="font-heading font-bold text-xl md:text-2xl text-text-primary">
 						SmartCode<span className="text-accent-blue">QA</span>
 					</span>

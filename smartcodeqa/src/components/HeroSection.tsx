@@ -9,7 +9,7 @@ import { Logo } from '@/components/ui/Logo';
 
 function RotatingLogo() {
   return (
-    <div className="absolute left-0 top-1/2 -translate-y-1/2 hidden lg:block z-10 overflow-hidden">
+    <div className="absolute left-0 top-1/2 -translate-y-1/2 hidden lg:block z-10 overflow-visible">
       <div className="relative w-44 h-44">
         <div className="absolute inset-0 rounded-full border-[2px] border-accent-blue/50 animate-spin-slow" />
         <div className="absolute inset-1 rounded-full border border-accent-cyan/40 animate-spin-reverse" />
@@ -28,7 +28,7 @@ function RotatingLogo() {
           </text>
         </svg>
         <div
-          className="absolute inset-0 rounded-full animate-pulse-glow"
+          className="absolute inset-0 rounded-full animate-pulse-glow overflow-visible"
           style={{ boxShadow: '0 0 30px rgba(59, 130, 246, 0.5), 0 0 60px rgba(6, 182, 212, 0.3)' }}
         />
       </div>
@@ -57,10 +57,11 @@ function FloatingStatusCard({
 
   return (
     <div
-      className={`absolute ${position} ${className} glass rounded-2xl p-3 sm:p-5 shadow-2xl cursor-pointer group z-20`}
+      className={`absolute ${position} ${className} glass rounded-2xl p-3 sm:p-5 shadow-2xl cursor-pointer group z-20 transition-transform duration-300 hover:scale-105 active:scale-95`}
+      style={{ boxShadow: '0 0 20px rgba(59, 130, 246, 0.15)' }}
     >
       <div className="flex items-center gap-3 sm:gap-4">
-        <div className={`w-10 sm:w-14 h-10 sm:h-14 ${iconBg} rounded-xl flex items-center justify-center`}>
+        <div className={`w-10 sm:w-14 h-10 sm:h-14 ${iconBg} rounded-xl flex items-center justify-center transition-all duration-300 group-hover:scale-110`}>
           {icon === 'check' ? (
             <svg className={`w-5 sm:w-6 h-5 sm:h-6 ${iconColor}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
@@ -120,13 +121,13 @@ export function HeroSection() {
               </Link>
             </div>
 
-            <div className="flex flex-wrap items-center gap-6 sm:gap-10 pt-4 sm:pt-6">
+            <div className="flex flex-wrap items-center gap-6 sm:gap-10 pt-4 sm:pt-6 pb-10">
               {[
                 { value: '80+', label: 'Clients Supported' },
                 { value: '8+', label: 'Specialists' },
                 { value: 'Multi', label: 'Domain Expertise' }
               ].map((stat, index) => (
-                <div key={index} className="text-center">
+                <div key={index} className="text-center relative z-30">
                   <div className="text-xl sm:text-2xl font-bold text-text-primary">{stat.value}</div>
                   <div className="text-xs sm:text-sm text-text-muted">{stat.label}</div>
                 </div>
@@ -161,14 +162,14 @@ export function HeroSection() {
         </div>
       </div>
 
-      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-20 animate-bounce sm:bottom-8">
-        <div className="flex flex-col items-center gap-1 sm:gap-2">
+      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-20 sm:bottom-8">
+        <div className="flex flex-col items-center gap-1 sm:gap-2 animate-pulse">
           <span className="text-xs sm:text-sm text-text-muted uppercase tracking-widest">Scroll</span>
-          <ChevronDown className="w-5 h-5 sm:w-6 sm:h-6 text-text-muted" />
+          <ChevronDown className="w-5 h-5 sm:w-6 sm:h-6 text-text-muted animate-bounce" />
         </div>
       </div>
 
-      <div className="absolute bottom-0 left-0 right-0 h-24 sm:h-32 bg-gradient-to-t from-background to-transparent z-20" />
+      <div className="absolute bottom-0 left-0 right-0 h-16 sm:h-20 bg-gradient-to-t from-background to-transparent z-20" />
     </section>
   );
 }
